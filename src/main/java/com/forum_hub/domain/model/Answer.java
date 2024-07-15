@@ -32,4 +32,12 @@ public class Answer {
   @Temporal(TemporalType.TIMESTAMP)
   @Column(name = "created_at", nullable = false)
   private Date createdAt;
+
+  public Answer(String message, String solution, Topic topic, User author) {
+    this.message = message;
+    this.solution = solution;
+    this.topic = topic;
+    this.author = author;
+    this.createdAt = new Date();
+  }
 }
